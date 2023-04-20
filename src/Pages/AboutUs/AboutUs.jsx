@@ -6,6 +6,7 @@ function AboutUs() {
   return (
     <div className={style.mainDiv}>
       <div className={style.Header}>
+        <span></span>
         <Header />
       </div>
       <div className={style.container}>
