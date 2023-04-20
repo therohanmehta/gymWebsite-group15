@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import { Link } from "react-router-dom";
 import style from "../TrainerSection/App.module.css";
-
+import Header from "../Header/Header";
 function Team() {
   const data = [
     {
@@ -59,6 +59,7 @@ function Team() {
 
   return (
     <div className="Tranning">
+      <Header/>
       <div style={{ textAlign: "center" }}>
         <h1>Our Professional Team</h1>
         <p>

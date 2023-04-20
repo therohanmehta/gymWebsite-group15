@@ -43,11 +43,12 @@
         font-size: 30px;
         z-index: 99;
         position: relative;
-        background-color: rgb(57, 55, 53);
+        background-color: rgba(57, 55, 53, 0.542);
         gap: 20px;
-        width: 80vw;
-        height: 45vh;
+        width: 50vw;
+        height: 52vh;
         align-items: center;
+        border-radius: 20px;
     }
     .button{
         display: block;

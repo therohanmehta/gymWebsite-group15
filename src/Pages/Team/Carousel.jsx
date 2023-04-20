@@ -242,6 +242,8 @@ function Carousel({
         >
           {data.map((item, index) => {
             return (
+              <>
+             
               <img
                 width={thumbnailWidth ? thumbnailWidth : "100px"}
                 src={item.image}
@@ -253,7 +255,8 @@ function Carousel({
                   setSlide(index);
                   setChange(!change);
                 }}
-              />
+                />
+                </>
             );
           })}
         </div>

@@ -8,6 +8,7 @@ function Header() {
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div className={header.nav}>
+   <Link to={'/home'}  >
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOaED3-rJgpu5AjeppalRNp9K3o9tGfWSPJw&usqp=CAU"
         alt=""
@@ -18,7 +19,7 @@ function Header() {
           marginLeft: "7vw",
           filter: "negative",
         }}
-      />
+      /></Link>
       <div>
         <span
           className={header.button}
@@ -40,7 +41,7 @@ function Header() {
           <Link to={"/training"}>training </Link>
           <Link to={"/trainer"}> traine</Link>
           <Link to={"/pricing"}>pricing</Link>
-          <Link>Log Out</Link>
+          <Link to={'/'}>LogOut</Link>
         </div>
       </div>
     </div>

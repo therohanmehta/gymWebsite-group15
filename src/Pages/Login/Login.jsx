@@ -34,14 +34,13 @@ function Login() {
 
     homeVis?<Home/> :  
 <div className={LoginCss.Div}>
-<TextField sx={{ width: '25ch' }} id="outlined-basic" label="Enter your Email" variant="outlined" onChange={(e)=>{setEnteredEmail(e.target.value)}}/>
+<TextField  sx={{ width: '25ch' }} id="outlined-basic" label="Enter your Email" variant="outlined" onChange={(e)=>{setEnteredEmail(e.target.value)}}/>
 <TextField type='password' sx={{ width: '25ch' }} id="outlined-basic" label="Enter your password   " variant="outlined" onChange={(e)=>{setEnteredPass(e.target.value)}}/>
-{/* <input type="email "  placeholder='Email' onChange={(e)=>{setEnteredEmail(e.target.value)}}/> */}
-{/* <input type="text "  placeholder='Password'  onChange={(e)=>{setEnteredPass(e.target.value)}}/> */}
-{homeVis?'':<Button variant='outlined' sx={{ width: '28ch' }} onClick={CheckDataFromLocal}>Click to validate</Button>}
-{/* {homeVis?<Link to={'/home'}><button onClick={()=>{setHomeVis(false)}}>Go to Home</button></Link>:""} */}
-<Button onClick={()=>{alert('Enter Details to Become a part of our gym family')}} variant='outlined' sx={{ width: '28ch' }}><Link to={'/registration'}>Dont have an account SIgnup</Link></Button>
-  
+
+{homeVis?'':<Button color='success' variant='contained' sx={{ width: '28ch', marginBottom:'30px'}} onClick={CheckDataFromLocal}>Login</Button>} 
+
+<Link to={'/registration'}><Button  onClick={()=>{alert('Enter Details to Become a part of our gym family')}} variant='contained' color='success' sx={{ width: '28ch'  }}>Dont have an account SIgnup</Button></Link>
+
 
 </div>
     

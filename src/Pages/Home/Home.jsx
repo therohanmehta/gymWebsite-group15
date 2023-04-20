@@ -1,13 +1,54 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import Header from '../Header/Header'
 import HomeCss from './Home.module.css'
 
 function Home() {
+  const Array = [
+    {
+      id: 1,
+      image:
+        "theportlandcentre.co.uk/wp-content/uploads/2020/11/20160613_201554-MONO-SFW.jpg",
+    },
+    {
+      id: 2,
+      image:
+        "https://www.ukactive.com/wp-content/uploads/2017/01/ukactive-boutique-fitness-physical-activity.jpg",
+    },
+    {
+      id: 3,
+      image: "https://picfiles.alphacoders.com/289/289817.jpg",
+    },
+    {
+      id: 4,
+      image:
+        "https://westwon.co.uk/wp-content/uploads/2018/02/iStock-597959750.jpg",
+    },
+    {
+      id: 5,
+      image: "https://d.newsweek.com/en/full/1524142/cardio-workout.jpg",
+    },
+  ];
+  const [data, setData] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setData((data) => 
+                (data + 1) % Array.length
+            );
+        }, 2500);
+        return () => clearInterval(interval);
+    }, [setData])
   return (
+    <>
+    <Header/>
     <div className={HomeCss.mainDiv}>
-      <Header/>
+
+
+      <img  src={Array[data].image} alt="" />
       <h1 className={HomeCss.intro}>“The harder you work and the more prepared you are for something, you’re going to be able to persevere through anything.”</h1>
     </div>
+    <div> </div>
+    </>
   )
 }
 

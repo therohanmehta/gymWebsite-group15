@@ -3,7 +3,7 @@
     padding: 0;
 }
 footer{
-    background-color: aquamarine ;
+    background-color: linear-gradient( to bottom right, rgb(53, 43, 43) 0%, rgb(53, 43, 43) 0%, rgb(173, 47, 47)50%, rgb(173, 47, 47) 0% );
     /* background: var(--color-primary); */
     border: 2px solid red;
     width: 99vw;
@@ -20,6 +20,7 @@ footer{
     display: grid;
     grid-template-columns: 26rem 1fr 1fr 1fr;
     gap: 6rem;
+    
 }
 .footer__container article{
     display: flex;
