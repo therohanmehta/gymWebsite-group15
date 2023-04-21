@@ -3,23 +3,32 @@
     justify-content: center;
     gap: 40px;
     background-color: rgb(242, 86, 86) rgba(57, 47, 47, 0.954);
-    height: 500px;
-    background: linear-gradient(
-            to bottom right,
-            rgb(53, 43, 43) 0%,
-            rgb(53, 43, 43) 0%,                                                                 
-            rgb(173, 47, 47)50%,
-            rgb(173, 47, 47) 0%
-        );
+    height: 100vh;
+          background: linear-gradient(270deg, #070707, #1a1a38);
+          background-size: 400% 400%;
+      
+          animation: AnimationName 3s ease infinite;
+      }
+      
+      @keyframes AnimationName {
+          0%{background-position:0% 50%}
+          50%{background-position:100% 50%}
+          100%{background-position:0% 50%}
+      }
+  .Wrapper3{
+    margin-top: 4vh;
+    
   }
   .Wrapper {
     background-color: rgba(54, 48, 48, 0.784);
     color: white;
     width: 200px;
     height: 300px;
-    margin-top: 70px;
+    margin-top: 10vh;
     text-align: center;
     font-size: small;
+    border-radius: 20px;
+    margin-left: 3vw;
   }
   .dollar {
     color: rgb(43, 210, 43);
@@ -34,40 +43,44 @@
   }
   .text {
     font-family: 'Brush Script MT';
-    font-size: 20px;
+    font-size: 30px;
   }
   
   .content {
     text-align: start;
-    margin: 30px 0 10px 20px;
+    margin: 30px 0 20px 20px;
   }
   .Wrapper_button {
     padding: 10px 40px;
-    font-size: 10px;
+    font-size: 12px;
     border-radius: 5px;
   }
-  
+  .box{
+    margin-top: 3.6vh;
+  }
   .Wrapper2 {
-    margin-top: 50px;
-    width: 250px;
-    height: 400px;
+    margin-top: 7vh;
+    width: 17vw;
+    height: 350px;
     background-color: rgba(245, 245, 220, 0.785);
     text-align: center;
-    font-size: small;
+    font-size: 2vh;
   }
   .Wrapper2_button {
     padding: 10px 40px;
     font-size: 10px;
     border-radius: 5px;
     background-color: greenyellow;
-    margin-top: 30px;
+    /* margin-top: 10px; */
   }
   
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1000px) {
     .Main_Container {
-      height: 480px;
-      /* font-size: 13px; */
+      height: 500px;
       gap: 20px;
+    }
+    .content{
+      margin-top: 10px;
     }
   
     .Wrapper {
@@ -82,18 +95,18 @@
       padding: 10px;
     }
     .Wrapper2 {
-      width: 190px;
+      width: 200px;
       margin-top: 50px;
-      height: 360px;
+      height: 50vh;
     }
     .Wrapper2_button {
       height: 30px;
       margin: 0;
     }
   
-    .content {
+    /* .content {
       margin-bottom: 20px;
-    }
+    } */
   }
   
   @media screen and (max-width: 850px) {
@@ -103,6 +116,10 @@
       display: flex;
       flex-direction: column;
       gap: 0;
+    }
+    .text{
+      margin-top: 4vh;
+      font-size: 25px;
     }
     .Wrapper {
       width: 90%;
@@ -114,7 +131,7 @@
     }
     .Wrapper2 {
       width: 90%;
-      height: 300px;
+      height: 200px;
       display: grid;
       grid-template-columns: 1fr 1fr 2fr 1fr;
       margin-left: 20px;
@@ -138,7 +155,7 @@
       width: 100px;
       padding: 5px;
       font-size: 12px;
-      height: 50px;
+      height: 7vh;
     }
     .Wrapper3 {
       margin-left: 40px;
@@ -146,14 +163,18 @@
   }
   @media screen and (max-width: 400px){
     .Main_Container{
-      height: 1500px;
+      height: 1000px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: space-evenly;
     }
     .Wrapper2{
-      height: 400px;
+      height: 310px;
     }
-    .Wrapper{
+    /* .Wrapper{
       margin-top: 10px;
-    }
+    } */
     .Wrapper3{
       margin-left: 20px;
     }
