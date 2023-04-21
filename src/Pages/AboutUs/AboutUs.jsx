@@ -14,9 +14,9 @@ function AboutUs() {
           <iframe
             src="https://www.youtube.com/embed/f6t9TQqdUzg"
             frameborder="0"
-            height="280"
-            width="500"
-            allowfullscreen="true"
+            // height="280"
+            // width="500"
+            allowFullScreen="true"
             title="Gym video1"
           ></iframe>
         </div>
@@ -51,14 +51,16 @@ function AboutUs() {
           <iframe
             src="https://www.youtube.com/embed/f6t9TQqdUzg"
             frameborder="0"
-            height="280"
-            width="500"
-            allowfullscreen="true"
+            // height="280"
+            // width="500"
+            allowFullScreen="true"
             title="Gym video2"
           ></iframe>
         </div>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

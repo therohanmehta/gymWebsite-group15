@@ -1,18 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .Div{
-    /* border: 2px solid red; */
-    /* display: flex;    */
-    /* display: block; */
-    flex-direction: column;
     width: 300px;
     height: auto;
-    margin-top: 14%;
-    margin-left: 32%;
-    margin-right: 20vw;
-    position: fixed;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
 }
+.Div TextField {
+    font-size: 3vh;
+}
+
 .Div *{
     margin-bottom: 10px;
 }
-*{
-    background-image: url();
+.mainDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    /* background: linear-gradient(-70deg, #a53e3a57 10%,rgba(19, 18, 18, 0.033) 90%),
+    url('https://www.pexels.com/photo/gray-barbel-plates-669576/s'); */
+    background-image: url("https://wallpapercave.com/wp/wp2639568.jpg")
 }

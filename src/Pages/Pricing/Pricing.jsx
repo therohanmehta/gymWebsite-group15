@@ -3,13 +3,13 @@ import Header from "../Header/Header";
 import style from "./Pricing.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
-import Footer from "../Footer/Footer";
 
 function Pricing() {
   return (
     <div>
-      
-  <div><Header /></div>
+      <div>
+        <Header />
+      </div>
       <div className={style.Main_Container}>
         <Comonent1 />
         <Component2 />
@@ -103,53 +103,50 @@ function Component2() {
 function Component3() {
   return (
     <>
+      <div>
+        <div className={style.Wrapper3}>
+          <h2>Membership</h2>
+          <h1>From Punch Pass to Monthly or Annual</h1>
+          <p style={{ width: "350px", fontSize: "20px" }}>
+            At Gym Base.We offer a wide range of membership with options to suit
+            every budge.Everything from One Day Pass,Punch Pass to monthly or
+            annual prepaid memberships. What's more.we don't tie you in to a
+            long term contact,giving you greater flexibility
+          </p>
 
-    <div>
-      <div className={style.Wrapper3}>
-        <h3>Membership</h3>
-        <h2>From Punch Pass to Monthly or Annual</h2>
-        <p style={{ width: "350px" }}>
-          At Gym Base.We offer a wide range of membership with options to suit
-          every budge.Everything from One Day Pass,Punch Pass to monthly or
-          annual prepaid memberships. What's more.we don't tie you in to a long
-          term contact,giving you greater flexibility
-        </p>
-
-        <h3>Each plan included</h3>
-        <p>
-          <span>
-            <AiOutlineArrowRight />
-          </span>
-          The best equipment global brands{" "}
-        </p>
-        <p>
-          <span>
-            <AiOutlineArrowRight />
-          </span>
-          The gym is open 24 hours a day,7 days a week{" "}
-        </p>
-        <p>
-          <span>
-            <AiOutlineArrowRight />
-          </span>
-          Two safe paymnt methods
-        </p>
-        <p>
-          <span>
-            <AiOutlineArrowRight />
-          </span>
-          Group fitness classes in the price of the subscription
-        </p>
-        <p>
-          <span>
-            <AiOutlineArrowRight />
-          </span>
-          No long-term contract,period
-        </p>
+          <h2>Each plan included</h2>
+          <p>
+            <span>
+              <AiOutlineArrowRight />
+            </span>
+            The best equipment global brands{" "}
+          </p>
+          <p>
+            <span>
+              <AiOutlineArrowRight />
+            </span>
+            The gym is open 24 hours a day,7 days a week{" "}
+          </p>
+          <p>
+            <span>
+              <AiOutlineArrowRight />
+            </span>
+            Two safe paymnt methods
+          </p>
+          <p>
+            <span>
+              <AiOutlineArrowRight />
+            </span>
+            Group fitness classes in the price of the subscription
+          </p>
+          <p>
+            <span>
+              <AiOutlineArrowRight />
+            </span>
+            No long-term contract,period
+          </p>
+        </div>
       </div>
-      
-    
-    </div>
     </>
   );
 }

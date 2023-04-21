@@ -1,17 +1,19 @@
 .div{
-    /* border: 2px solid red; */
     display: flex;
-    flex-direction: column;
-    margin-top: 1%;
-    margin-left: 22vw;
-    /* border: 2px solid red; */
-    height: 320px;
-    width: 250px;
-   
-    
+    flex-direction: column; 
 }
 
 .div *{
     padding-bottom: 10px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("https://wallpapercave.com/wp/wp2639568.jpg")
+
 }
 

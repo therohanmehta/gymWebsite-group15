@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useRecoilState } from "recoil";
 import { Link } from "react-router-dom";
 import RegCss from "./Registration.module.css";
@@ -18,14 +18,12 @@ function Registration() {
   const [passwordError, setPasswordError] = useState(true);
   const [submitButton, setSubmitButton] = useState(false);
   function submitToLocal() {
+    //variable for the validation of input
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const nameRegex = /^[a-zA-Z]+$/;
+    const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/;
 
-  //variable for the validation of input
-    const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    const nameRegex=/^[a-zA-Z]+$/
-    const passwordRegex=/^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/
-
-
-    if (fname == "" && lname == "" && email == "" && password == "") {
+    if (fname === "" && lname === "" && email === "" && password === "") {
       const newData = [...local];
       setLocal(newData);
       localStorage.setItem("users", JSON.stringify(newData));
@@ -51,96 +49,97 @@ function Registration() {
   }
 
   return (
-    <div className={RegCss.div}>
-      <TextField
-        type="text"
-        sx={{ width: "25ch" }}
-        id="outlined-basic"
-        label="First Name"
-        variant="outlined"
-        helperText={fNameError ? "Only contains Alphabets " : "Valid Name"}
-        onChange={(e) => {
-          setFname(e.target.value);
-          {
-            /^[a-zA-Z]+$/.test(fname)
-              ? setFnameError(false)
-              : setFnameError(true);
-          }
-        }}
-      />
-
-      <TextField
-        sx={{ width: "25ch" }}
-        id="outlined-basic"
-        label="Last Name"
-        variant="outlined"
-        helperText={lNameError ? "Only contains Alphabets " : "Valid Name"}
-        onChange={(e) => {
-          setLname(e.target.value);
-          {
-            /^[a-zA-Z]+$/.test(lname)
-              ? setLnameError(false)
-              : setLnameError(true);
-          }
-        }}
-      />
-
-      <TextField
-        sx={{ width: "25ch" }}
-        id="outlined-basic"
-        type="email"
-        label="E-mail"
-        variant="outlined"
-        helperText={emailError ? "Invalid email" : "Valid Email"}
-        onChange={(e) => {
-          setEmail(e.target.value);
-          {
-            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)
-              ? setEmailError(false)
-              : setEmailError(true);
-          }
-        }}
-      />
-      <TextField
-        sx={{ width: "25ch" }}
-        id="outlined-basic"
-        type="password"
-        label="Password"
-        variant="outlined"
-        helperText={
-          passwordError
-            ? "password contain 8 characters with one number"
-            : "Strong Password"
-        }
-        onChange={(e) => {
-          setPassword(e.target.value);
-          {
-            /^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/.test(password)
-              ? setPasswordError(false)
-              : setPasswordError(true);
-          }
-        }}
-      />
-      {submitButton ? (
-        <Button
-          sx={{ width: "28ch" }}
+    <div className={RegCss.container}>
+      <div className={RegCss.div}>
+        <TextField
+          type="text"
+          sx={{ width: "25ch" }}
+          id="outlined-basic"
+          label="First Name"
           variant="outlined"
-          onClick={handleSubmitButton}
-        >
-          <Link to={"/"}>Go to Login Page</Link>
-        </Button>
-      ) : (
-        <Button
-          sx={{ width: "28ch" }}
+          helperText={fNameError ? "Only contains Alphabets " : "Valid Name"}
+          onChange={(e) => {
+            setFname(e.target.value);
+            {
+              /^[a-zA-Z]+$/.test(fname)
+                ? setFnameError(false)
+                : setFnameError(true);
+            }
+          }}
+        />
+
+        <TextField
+          sx={{ width: "25ch" }}
+          id="outlined-basic"
+          label="Last Name"
           variant="outlined"
-          onClick={submitToLocal}
-        >
-          CLick
-        </Button>
-      )}
+          helperText={lNameError ? "Only contains Alphabets " : "Valid Name"}
+          onChange={(e) => {
+            setLname(e.target.value);
+            {
+              /^[a-zA-Z]+$/.test(lname)
+                ? setLnameError(false)
+                : setLnameError(true);
+            }
+          }}
+        />
+
+        <TextField
+          sx={{ width: "25ch" }}
+          id="outlined-basic"
+          type="email"
+          label="E-mail"
+          variant="outlined"
+          helperText={emailError ? "Invalid email" : "Valid Email"}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            {
+              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)
+                ? setEmailError(false)
+                : setEmailError(true);
+            }
+          }}
+        />
+        <TextField
+          sx={{ width: "25ch" }}
+          id="outlined-basic"
+          type="password"
+          label="Password"
+          variant="outlined"
+          helperText={
+            passwordError
+              ? "password contain 8 characters with one number"
+              : "Strong Password"
+          }
+          onChange={(e) => {
+            setPassword(e.target.value);
+            {
+              /^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/.test(password)
+                ? setPasswordError(false)
+                : setPasswordError(true);
+            }
+          }}
+        />
+        {submitButton ? (
+          <Button
+            sx={{ width: "28ch" }}
+            variant="outlined"
+            onClick={handleSubmitButton}
+          >
+            <Link to={"/"}>Go to Login Page</Link>
+          </Button>
+        ) : (
+          <Button
+            sx={{ width: "28ch" }}
+            variant="outlined"
+            onClick={submitToLocal}
+          >
+            CLick
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
-{
-}
+
 export default Registration;

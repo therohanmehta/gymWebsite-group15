@@ -5,6 +5,10 @@
     background-color: aquamarine;
     color: rgb(0, 0, 0);
   }
+  /* .mainWrapper{
+    height: 100vh;
+    width: 100vw;
+  } */
   .wrapper {
     background-color: rgb(98, 55, 55);
     border: 1px solid black;
@@ -68,20 +72,31 @@
   
   }
   @media only screen and (min-width : 735px) and (max-width:1400px) {
+   
     .div3{
         font-size:16px;
         padding-top:14px;
     }
     @media only screen and (min-width : 321px) and (max-width:734px) {
+      .wrapper{
+        height: 1800px;
+        width: 100vw;
+      }
         .div3{
             font-size:13px;
             padding-top:1px;
         }
     }
     @media only screen and (min-width : 200px) and (max-width:320px) {
+      .wrapper{
+        height: 2000px;
+        width: 100vw;
+      }
+        
         .div3 {
             font-size:12px;
             padding-top:1px;
         }
     }
 }
+
