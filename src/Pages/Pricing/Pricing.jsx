@@ -15,6 +15,7 @@ function Pricing() {
         <Component2 />
         <Component3 />
       </div>
+      <Footer/>
     </div>
   );
 }
@@ -150,6 +151,7 @@ function Component3() {
       
     
     </div>
+    
     </>
   );
 }

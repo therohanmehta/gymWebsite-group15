@@ -1,6 +1,7 @@
-import React,{useState, useEffect} from 'react'
-import Header from '../Header/Header'
-import HomeCss from './Home.module.css'
+import React, { useState, useEffect } from "react";
+import Header from "../Header/Header";
+import HomeCss from "./Home.module.css";
+import Footer from "../Footer/Footer";
 
 function Home() {
   const Array = [
@@ -30,26 +31,26 @@ function Home() {
   ];
   const [data, setData] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setData((data) => 
-                (data + 1) % Array.length
-            );
-        }, 2500);
-        return () => clearInterval(interval);
-    }, [setData])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setData((data) => (data + 1) % Array.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, [setData]);
   return (
     <>
-    <Header/>
-    <div className={HomeCss.mainDiv}>
-
-
-      <img  src={Array[data].image} alt="" />
-      <h1 className={HomeCss.intro}>“The harder you work and the more prepared you are for something, you’re going to be able to persevere through anything.”</h1>
-    </div>
-    <div> </div>
+      <Header />
+      <div className={HomeCss.mainDiv}>
+        <img src={Array[data].image} alt="" />
+        <h1 className={HomeCss.intro}>
+          “The harder you work and the more prepared you are for something,
+          you’re going to be able to persevere through anything.”
+        </h1>
+      </div>
+      <div> </div>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
