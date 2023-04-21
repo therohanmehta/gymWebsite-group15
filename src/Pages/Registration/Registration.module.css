@@ -1,10 +1,15 @@
 .div{
     display: flex;
     flex-direction: column; 
+    gap: 3vh;
+    background-color: rgba(9, 9, 10, 0.68);
+    padding: 20px;
 }
-
-.div *{
-    padding-bottom: 10px;
+.div span {
+    color: antiquewhite;
+}
+.Button{
+    background-color: rgba(55, 98, 76, 0.821);
 }
 .container{
     display: flex;

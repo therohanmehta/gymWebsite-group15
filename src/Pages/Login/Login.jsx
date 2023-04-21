@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useRecoilValue, useRecoilState } from "recoil";
 import LoginCss from "./Login.module.css";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import { showHome, userData } from "../../locaStorage/localStorage";
 import Home from "../Home/Home";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-
 function Login() {
   const atomvalue = useRecoilValue(userData);
   const [enteredEmail, setEnteredEmail] = useState();
@@ -33,20 +32,20 @@ function Login() {
     <div className={LoginCss.mainDiv}>
       <div className={LoginCss.Div}>
         <TextField
-          sx={{ width: "25ch" }}
+          sx={{ width: "25ch", backgroundColor: "rgb(56, 58, 57)" }}
           id="outlined-basic"
           label="Enter your Email"
-          variant="outlined"
+          variant="filled"
           onChange={(e) => {
             setEnteredEmail(e.target.value);
           }}
         />
         <TextField
           type="password"
-          sx={{ width: "25ch" }}
+          sx={{ width: "25ch", backgroundColor: "rgb(56, 58, 57)" }}
           id="outlined-basic"
           label="Enter your password   "
-          variant="outlined"
+          variant="filled"
           onChange={(e) => {
             setEnteredPass(e.target.value);
           }}

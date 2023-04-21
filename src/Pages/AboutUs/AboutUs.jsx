@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import style from "./AboutUs.module.css";
+// import { Link } from "react-router-dom";
+
 function AboutUs() {
   return (
     <div className={style.mainDiv}>
@@ -58,7 +60,10 @@ function AboutUs() {
           ></iframe>
         </div>
       </div>
-      <div>
+      {/* <Link to={"/card"}>
+        <button>See More</button>
+      </Link> */}
+      <div className={style.Footer}>
         <Footer />
       </div>
     </div>

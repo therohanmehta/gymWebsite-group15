@@ -54,12 +54,20 @@ function Registration() {
         <TextField
           type="text"
           sx={{ width: "25ch" }}
-          id="outlined-basic"
+          title="FirststName"
+          id="filled-basic1"
           label="First Name"
-          variant="outlined"
-          helperText={fNameError ? "Only contains Alphabets " : "Valid Name"}
+          variant="filled"
+          helperText={
+            fNameError ? (
+              <span>Only contains Alphabets </span>
+            ) : (
+              <span>Valid Name</span>
+            )
+          }
           onChange={(e) => {
             setFname(e.target.value);
+            // eslint-disable-next-line no-lone-blocks
             {
               /^[a-zA-Z]+$/.test(fname)
                 ? setFnameError(false)
@@ -70,12 +78,20 @@ function Registration() {
 
         <TextField
           sx={{ width: "25ch" }}
-          id="outlined-basic"
+          id="filled-basic2"
           label="Last Name"
-          variant="outlined"
-          helperText={lNameError ? "Only contains Alphabets " : "Valid Name"}
+          variant="filled"
+          title="LastName"
+          helperText={
+            lNameError ? (
+              <span>Only contains Alphabets </span>
+            ) : (
+              <span>Valid Name</span>
+            )
+          }
           onChange={(e) => {
             setLname(e.target.value);
+            // eslint-disable-next-line no-lone-blocks
             {
               /^[a-zA-Z]+$/.test(lname)
                 ? setLnameError(false)
@@ -86,13 +102,17 @@ function Registration() {
 
         <TextField
           sx={{ width: "25ch" }}
-          id="outlined-basic"
+          id="filled-basic3"
           type="email"
+          title="Email"
           label="E-mail"
-          variant="outlined"
-          helperText={emailError ? "Invalid email" : "Valid Email"}
+          variant="filled"
+          helperText={
+            emailError ? <span>Envalid email</span> : <span>Valid Email</span>
+          }
           onChange={(e) => {
             setEmail(e.target.value);
+            // eslint-disable-next-line no-lone-blocks
             {
               /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)
                 ? setEmailError(false)
@@ -102,17 +122,21 @@ function Registration() {
         />
         <TextField
           sx={{ width: "25ch" }}
-          id="outlined-basic"
+          id="filled-basic4"
           type="password"
           label="Password"
-          variant="outlined"
+          title="Password"
+          variant="filled"
           helperText={
-            passwordError
-              ? "password contain 8 characters with one number"
-              : "Strong Password"
+            passwordError ? (
+              <span>password contain 8 characters with one number</span>
+            ) : (
+              <span>Strong Password</span>
+            )
           }
           onChange={(e) => {
             setPassword(e.target.value);
+            // eslint-disable-next-line no-lone-blocks
             {
               /^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/.test(password)
                 ? setPasswordError(false)
@@ -120,23 +144,27 @@ function Registration() {
             }
           }}
         />
-        {submitButton ? (
-          <Button
-            sx={{ width: "28ch" }}
-            variant="outlined"
-            onClick={handleSubmitButton}
-          >
-            <Link to={"/"}>Go to Login Page</Link>
-          </Button>
-        ) : (
-          <Button
-            sx={{ width: "28ch" }}
-            variant="outlined"
-            onClick={submitToLocal}
-          >
-            CLick
-          </Button>
-        )}
+        <div className={RegCss.Button}>
+          {submitButton ? (
+            <Button
+              sx={{ width: "28ch" }}
+              variant="filled"
+              onClick={handleSubmitButton}
+            >
+              <Link to={"/"}>
+                <b>Go to Login Page</b>
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              sx={{ width: "28ch", backgroundColor: "rgba(73, 83, 24, 0.701)" }}
+              variant="filled"
+              onClick={submitToLocal}
+            >
+              Register
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,56 +1,59 @@
 import React from "react";
 import style from "./footer.module.css";
 import { Link } from "react-router-dom";
-import { FaFacebookF } from "react-icons/fa";
-import { AiOutlineTwitter, AiFillInstagram } from "react-icons/ai";
+import { ImFacebook2, ImYoutube } from "react-icons/im";
+import { BsLinkedin } from "react-icons/bs";
+import { ImWhatsapp } from "react-icons/im";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="container footer__container">
-        <article>
-          <h3>GYM</h3>
-          <p>
-            Loreum ipsum dolor sitt feugiant <br /> various nue oliquet
-          </p>
-          <div className="footer__socials">
-            <Link to="https://www.facebook.com/" target="_blank">
-              <FaFacebookF />
-            </Link>
-            <Link to="https://www.twitter.com/" target="_blank">
-              <AiOutlineTwitter />
-            </Link>
-            <Link to="https://www.instagram.com/" target="_blank">
-              <AiFillInstagram />
-            </Link>
+    <>
+      <div className={style.container}>
+        <div className={style.footer_title}>
+          <h2>
+            <span>The Warehouse Gym</span>
+          </h2>
+          <p>Your Body Temple</p>
+
+          <div className={style.social_icons}>
+            <ImFacebook2 className={style.icons} />
+            <BsLinkedin className={style.icons} />
+            <ImWhatsapp className={style.icons} />
+            <ImYoutube className={style.icons} />
           </div>
-        </article>
-        <article>
-          <Link to="/Healthy living">Healthy living</Link>
-          <Link to="/Loreum">Loreum</Link>
-          <Link to="/Loreum ipsum">Loreum ipsum</Link>
-          <Link to="/Loreum">Loreum</Link>
-          <Link to="/Loreum ipsum">Loreum ipsum</Link>
-        </article>
-        <article>
-          <Link to="/services">services</Link>
-          <Link to="/Loreum">Loreum</Link>
-          <Link to="/Loreum ipsum">Loreum ipsum</Link>
-          <Link to="/Loreum ipsum">Loreum ipsum</Link>
-          <Link to="/Loreum ipsum">Loreum ipsum</Link>
-        </article>
-        <article>
-          <Link to="/programms">Programms</Link>
-          <Link to="/Loreum">Loreum</Link>
-          <Link to="/Loreum ipsum">Loreum</Link>
-          <Link to="/Loreum ipsum">Loreum</Link>
-          <Link to="/Loreum ipsum">Loreum</Link>
-        </article>
+        </div>
+
+        <div className={style.footer_content}>
+          <hr />
+          <ul>
+            <h3>
+              <span>The Warehouse Gym</span>
+            </h3>
+            <Link to="/home">Home</Link>
+            <Link to="/aboutus">AboutUs</Link>
+            <Link to="/training">Traning</Link>
+          </ul>
+
+          <ul>
+            <h3>
+              <span>Services</span>
+            </h3>
+            <Link to="/">Apply Online</Link>
+            <Link>Available Positions</Link>
+          </ul>
+
+          <ul>
+            <h3>
+              <span>About Us</span>
+            </h3>
+            <Link to="/trainer">Meet Our Team</Link>
+            <Link>Our Responsibilities</Link>
+            <Link>Our Codes</Link>
+            <Link>Our Values</Link>
+          </ul>
+        </div>
       </div>
-      <div className="footer_copyright">
-        <p>@{new Date().getFullYear()} All rights copy reserved</p>
-      </div>
-    </footer>
+    </>
   );
 };
 
