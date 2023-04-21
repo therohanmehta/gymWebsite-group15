@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "./Carousel.jsx";
 import  Heading from "../Header/Header.jsx";
 import './Carousel.css'
+import Footer from "../Footer/Footer.jsx";
 function Tranning() {
   const data = [
     {
@@ -106,6 +107,7 @@ function Tranning() {
         </div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 }

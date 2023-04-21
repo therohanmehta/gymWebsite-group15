@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 import style from "./App.module.css";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 function TrainerSection() {
   return (
@@ -42,6 +43,7 @@ function TrainerSection() {
           <button className={style.btn}>Meet Our Team</button>{" "}
         </Link>
       </div>
+      <Footer/>
     </>
   );
 }

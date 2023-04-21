@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import HomeCss from "./Home.module.css";
-
+import Footer  from "../Footer/Footer";
 function Home() {
   const Array = [
     {
@@ -46,7 +46,7 @@ function Home() {
           you’re going to be able to persevere through anything.”
         </h1>
       </div>
-      <div> </div>
+      <div><Footer/> </div>
     </>
   );
 }
