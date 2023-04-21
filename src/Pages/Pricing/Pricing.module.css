@@ -3,10 +3,11 @@
     justify-content: center;
     gap: 40px;
     background-color: rgb(242, 86, 86) rgba(57, 47, 47, 0.954);
-    height: 100vh;
+    height: 67vh;
+padding-bottom: 100px;
           background: linear-gradient(270deg, #070707, #1a1a38);
           background-size: 400% 400%;
-      
+          padding-top: 10vh;
           animation: AnimationName 3s ease infinite;
       }
       
