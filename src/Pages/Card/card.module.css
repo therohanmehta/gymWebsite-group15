@@ -1,22 +1,27 @@
 
-  .about-container{  
+  .aboutcontainer{  
     width: 100%;
     height: 100%;
     background-color: white;
     border: 2px solid red;
     color: black;
   }
-  .div-1{
+  .div1{
     display: flex;
     padding: 10px;
     justify-content: space-between;
     gap: 25px;
+    text-align: center;
+    align-items: center;
+    background-color: grey;
+    font-size: 30px ;
+    font-family:  'Lobster Two', cursive;
   }
-  .div-2{
+  .div2{
     display: block;
     width: 100%;
     border: 2px solid black;
-    background-color: aquamarine;
+    background-color: gray;
     height: max-content;
   }
   .box{
@@ -27,7 +32,7 @@
    
     margin: 20px;
   }
-  .big-box{
+  .bigbox{
     display: flex;
     justify-content: center;
     margin: 10px;
@@ -35,5 +40,8 @@
   .img{
     width: 100%;
     height: 100%;
+  }
+  .division{
+   
   }
   

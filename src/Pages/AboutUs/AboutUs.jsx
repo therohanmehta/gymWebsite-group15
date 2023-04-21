@@ -60,7 +60,7 @@ function AboutUs() {
         </div>
         
       </div>
-      <Link to={"/card"}  > <button >See More</button></Link>
+      <Link to={"/card"}  > <button className={style.End1} >See More</button></Link>
       <Footer/>
     </div>
   );
