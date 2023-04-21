@@ -37,10 +37,11 @@ function TrainerSection() {
             <p className={style.div3}>Williamson</p>
           </div>
         </div>
-        <Link to={"/team"} className="link-tag">
-          {" "}
-          <button className={style.btn}>Meet Our Team</button>{" "}
-        </Link>
+        <div className={style.submit}>
+          <Link to={"/team"} className="link-tag">
+            <button className={style.btn}>Meet Our Team</button>{" "}
+          </Link>
+        </div>
       </div>
     </>
   );
