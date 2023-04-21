@@ -1,3 +1,4 @@
+
 .mainDiv{
     width: 100vw;
     display: flex;
@@ -14,6 +15,7 @@
     justify-content: space-around;
     gap: 5vw;
     margin-right: 5vw;
+    margin-top: 4vh;
 }
 .container2 {
     display: flex;
@@ -23,13 +25,15 @@
     margin-top: 10vh;
 }
 .video{
-    margin: 10vh 0 0 7vw; 
+    margin: 7vh 0 0 7vw; 
+
 }
 .video2{
-    margin-right: 10vw;
+    margin-right: 7vw;
 }
 iframe{
     width: 40vw;
+    height: 44vh;
 }
 
 
@@ -39,12 +43,10 @@ iframe{
     }
     .container2{
         margin-top: 10vh;
+        margin-right: 3vw;
     }
     .video{
-        margin-left: 2vw;
-    }
-    .video2{
-        margin-right: 2vw;
+        margin-left: 3vw;
     }
 
 }
