@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import header from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import  {GiCrossMark}  from "react-icons/gi";
 import { BsXCircle } from "react-icons/bs";
 import { showHome } from "../../locaStorage/localStorage";
 import { useRecoilState } from "recoil";
@@ -17,10 +18,10 @@ function Header() {
           alt=""
           style={{
             borderRadius: "50%",
-            marginTop: "10px",
-            height: "3.8rem",
-            marginLeft: "7vw",
+            marginTop: "3px",
+            height: "3rem",
             filter: "negative",
+            marginLeft:'30px'
           }}
         />
       </Link>
@@ -42,12 +43,10 @@ function Header() {
           onClick={() => setIsVisible(false)}
         >
           <Link to={"/aboutus"}>About</Link>
-          <Link to={"/training"}>training </Link>
-          <Link to={"/trainer"}> traine</Link>
-          <Link to={"/pricing"}>pricing</Link>
-          <Link to={"/"} onClick={() => setIsLogin(false)}>
-            LogOut
-          </Link>
+          <Link to={"/training"}>What We Provide? </Link>
+          <Link to={"/trainer"}> Our Trainers</Link>
+          <Link to={"/pricing"}>Our Plans </Link>
+          <Link to={"/"} onClick={() => setIsLogin(false)}>logout</Link>
         </div>
       </div>
     </div>

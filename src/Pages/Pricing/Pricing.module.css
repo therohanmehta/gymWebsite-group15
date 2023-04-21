@@ -3,15 +3,18 @@
     justify-content: center;
     gap: 40px;
     background-color: rgb(242, 86, 86) rgba(57, 47, 47, 0.954);
-    height: 500px;
-    background: linear-gradient(
-            to bottom right,
-            rgb(53, 43, 43) 0%,
-            rgb(53, 43, 43) 0%,                                                                 
-            rgb(173, 47, 47)70%,
-            rgb(173, 47, 47) 0%
-        );
-  }
+    height: 100vh;
+          background: linear-gradient(270deg, #070707, #1a1a38);
+          background-size: 400% 400%;
+      
+          animation: AnimationName 3s ease infinite;
+      }
+      
+      @keyframes AnimationName {
+          0%{background-position:0% 50%}
+          50%{background-position:100% 50%}
+          100%{background-position:0% 50%}
+      }
   .Wrapper3{
     margin-top: 4vh;
     

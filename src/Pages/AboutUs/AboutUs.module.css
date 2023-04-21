@@ -3,9 +3,21 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(-70deg, #a53e3a57 10%,rgba(19, 18, 18, 0.033) 90%),
-     url('https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');
-}
+   
+     /* url('https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80'); */
+
+
+        background: linear-gradient(270deg, #070707, #1a1a38);
+        background-size: 400% 400%;
+    
+        animation: AnimationName 3s ease infinite;
+    }
+    
+    @keyframes AnimationName {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
 .txt{
     color: white;
     font-size: 3vh;

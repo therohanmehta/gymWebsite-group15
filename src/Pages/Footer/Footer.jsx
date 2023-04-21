@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./footer.module.css";
+import style from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import { ImFacebook2, ImYoutube } from "react-icons/im";
 import { BsLinkedin } from "react-icons/bs";
@@ -13,7 +13,9 @@ const Footer = () => {
           <h2>
             <span>The Warehouse Gym</span>
           </h2>
-          <p>Your Body Temple</p>
+          <p>
+            Your Body Temple
+          </p>
 
           <div className={style.social_icons}>
             <ImFacebook2 className={style.icons} />

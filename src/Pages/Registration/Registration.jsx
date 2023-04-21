@@ -12,10 +12,7 @@ function Registration() {
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fNameError, setFnameError] = useState(true);
-  const [lNameError, setLnameError] = useState(true);
-  const [emailError, setEmailError] = useState(true);
-  const [passwordError, setPasswordError] = useState(true);
+
   const [submitButton, setSubmitButton] = useState(false);
   function submitToLocal() {
     //variable for the validation of input
@@ -53,112 +50,99 @@ function Registration() {
       <div className={RegCss.div}>
         <TextField
           type="text"
-          sx={{ width: "25ch" }}
+          color="success"
+          sx={{ width: "25ch" ,paddingBottom:'0px' , backgroundColor: "rgb(122, 128, 125)" }}
           title="FirststName"
           id="filled-basic1"
           label="First Name"
           variant="filled"
           helperText={
-            fNameError ? (
-              <span>Only contains Alphabets </span>
-            ) : (
-              <span>Valid Name</span>
+            /^[a-zA-Z]+$/.test(fname) ? (
+'Valid Name'            ) : (
+              'Only contains Alphabets '
             )
           }
           onChange={(e) => {
             setFname(e.target.value);
-            // eslint-disable-next-line no-lone-blocks
-            {
-              /^[a-zA-Z]+$/.test(fname)
-                ? setFnameError(false)
-                : setFnameError(true);
-            }
+           
+
           }}
         />
 
         <TextField
-          sx={{ width: "25ch" }}
+          sx={{ width: "25ch" ,paddingBottom:'0px', backgroundColor: "rgb(122, 128, 125)"}}
           id="filled-basic2"
+          color="info"
           label="Last Name"
           variant="filled"
           title="LastName"
           helperText={
-            lNameError ? (
-              <span>Only contains Alphabets </span>
-            ) : (
-              <span>Valid Name</span>
-            )
+            /^[a-zA-Z]+$/.test(lname)? 
+             ' Valid Name'
+             : 
+              'Only contains Alphabets'
+            
           }
           onChange={(e) => {
             setLname(e.target.value);
-            // eslint-disable-next-line no-lone-blocks
-            {
-              /^[a-zA-Z]+$/.test(lname)
-                ? setLnameError(false)
-                : setLnameError(true);
-            }
+            
+           
           }}
         />
 
         <TextField
-          sx={{ width: "25ch" }}
+          sx={{ width: "25ch" ,paddingBottom:'0px' , backgroundColor: "rgb(122, 128, 125)" }}
           id="filled-basic3"
+          color='secondary'
           type="email"
           title="Email"
           label="E-mail"
           variant="filled"
           helperText={
-            emailError ? <span>Envalid email</span> : <span>Valid Email</span>
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)? 'Valid email': 'Invalid Email'
           }
           onChange={(e) => {
             setEmail(e.target.value);
-            // eslint-disable-next-line no-lone-blocks
-            {
-              /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)
-                ? setEmailError(false)
-                : setEmailError(true);
-            }
+          
+         
           }}
         />
         <TextField
-          sx={{ width: "25ch" }}
+          sx={{ width: "25ch" ,paddingBottom:'', backgroundColor: "rgb(122, 128, 125)" }}
           id="filled-basic4"
+          color="error"
           type="password"
           label="Password"
           title="Password"
           variant="filled"
           helperText={
-            passwordError ? (
-              <span>password contain 8 characters with one number</span>
+            /^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/.test(password)? (
+              'Strong Password'
             ) : (
-              <span>Strong Password</span>
+        ' Password contain 8 characters with one number'
             )
           }
           onChange={(e) => {
             setPassword(e.target.value);
-            // eslint-disable-next-line no-lone-blocks
-            {
-              /^(?=.*\d)(?=.*[a-zA-Z]).{7,}$/.test(password)
-                ? setPasswordError(false)
-                : setPasswordError(true);
-            }
           }}
         />
         <div className={RegCss.Button}>
           {submitButton ? (
-            <Button
-              sx={{ width: "28ch" }}
-              variant="filled"
+            <Link to={"/"}> <Button
+              sx={{ width: "28ch",paddingBottom:'0px',marginTop:'10px' ,borderRadius:6, borderBottomRightRadius:0}}
+              variant="contained"
+              color='success'
               onClick={handleSubmitButton}
             >
-              <Link to={"/"}>
-                <b>Go to Login Page</b>
-              </Link>
-            </Button>
+              
+                Go to Login Page
+              
+            </Button></Link>
           ) : (
             <Button
-              sx={{ width: "28ch", backgroundColor: "rgba(73, 83, 24, 0.701)" }}
-              variant="filled"
+              color="primary"
+              sx={{ width: "12ch" ,paddingBottom:'0px',marginTop:'10px',marginLeft:'50px' ,borderRadius:4, borderBottomRightRadius:0}}
+              variant="contained"
               onClick={submitToLocal}
             >
               Register

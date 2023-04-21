@@ -1,16 +1,14 @@
 .div{
     display: flex;
     flex-direction: column; 
-    gap: 3vh;
-    background-color: rgba(9, 9, 10, 0.68);
-    padding: 20px;
+    
+    color: rgb(0, 0, 0);
+    box-shadow: 10px -11px 34px rgba(0, 93, 0, 0.8);
 }
 .div span {
-    color: antiquewhite;
+    color: rgb(63, 57, 50);
 }
-.Button{
-    background-color: rgba(55, 98, 76, 0.821);
-}
+
 .container{
     display: flex;
     align-items: center;
@@ -21,4 +19,5 @@
     background-image: url("https://wallpapercave.com/wp/wp2639568.jpg")
 
 }
+
 

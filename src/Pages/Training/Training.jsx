@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel.jsx";
 import  Heading from "../Header/Header.jsx";
+import './Carousel.css'
 function Tranning() {
   const data = [
     {
@@ -64,9 +65,9 @@ function Tranning() {
     fontWeight: "bold",
   };
   
-  return (
-    <div className="Tranning">
+  return (<>
       <Heading/>
+    <div className="Tranning">
       <div style={{ textAlign: "center" }}>
         <h2 style={{color:"orange" ,fontSize:"5rem"}}>Training Programs</h2>
         <p>
@@ -105,6 +106,7 @@ function Tranning() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

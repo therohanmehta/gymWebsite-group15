@@ -4,19 +4,21 @@
 }
 
 .Div{
-    width: 300px;
+    width: 216px;
     height: auto;
     display: flex;
     gap: 2vh;
     flex-direction: column;
+    box-shadow: 15px 18px 25px rgba(0, 93, 0, 0.8);
 }
+
+
+
 .Div TextField {
     font-size: 3vh;
 }
 
-.Div *{
-    margin-bottom: 10px;
-}
+
 .mainDiv {
     display: flex;
     align-items: center;

@@ -6,16 +6,16 @@ import { BsCheckCircle } from "react-icons/bs";
 
 function Pricing() {
   return (
-    <div>
-      <div>
+    <>
         <Header />
+      <div>
       </div>
       <div className={style.Main_Container}>
         <Comonent1 />
         <Component2 />
         <Component3 />
       </div>
-    </div>
+    </>
   );
 }
 const Comonent1 = () => {
