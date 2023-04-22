@@ -16,10 +16,10 @@ function AboutUs() {
         <div className={style.video}>
           <iframe
             src="https://www.youtube.com/embed/j528loCi-lI"
-            frameborder="0"
+            frameBorder="0"
             // height="280"
             // width="500"
-            allowFullScreen="true"
+            allowFullScreen={true}
             title="Gym video1"
           ></iframe>
         </div>
@@ -54,10 +54,10 @@ Community atmosphere: <br /><br />
         <div className={style.video2}>
           <iframe
             src="https://www.youtube.com/embed/tUykoP30Gb0"
-            frameborder="0"
+           frameBorder="0"
             // height="280"
             // width="500"
-            allowFullScreen="true"
+            allowFullScreen={true}
             title="Gym video2"
           ></iframe>
         </div>

@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import style from "./Pricing.module.css";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
+import Footer from "../Footer/Footer";
 
 function Pricing() {
   return (
@@ -15,6 +16,7 @@ function Pricing() {
         <Component2 />
         <Component3 />
       </div>
+      <Footer/>
     </>
   );
 }
