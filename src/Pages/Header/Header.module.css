@@ -44,12 +44,11 @@
     grid-column: 5;
     display: none;
 }
-@media screen and  (max-width: 150px){
+@media screen and  (max-width: 1000px){
     .Link{
-        font-size: 3vw;
+        font-size: 2vw;
     }
 }
-
 
 @media screen and  (max-width: 850px){
     .nav{

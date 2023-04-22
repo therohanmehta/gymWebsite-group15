@@ -33,9 +33,11 @@
   }
   .footer_content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 1rem;
     margin-bottom: 1rem;
+    gap: 2vw;
+    
   }
   .footer_content ul {
     list-style: none;
