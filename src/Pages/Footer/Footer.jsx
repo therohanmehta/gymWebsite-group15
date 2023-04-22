@@ -13,15 +13,21 @@ const Footer = () => {
           <h2>
             <span>The Warehouse Gym</span>
           </h2>
-          <p>
-            Your Body Temple
-          </p>
+          <p>Your Body Temple</p>
 
           <div className={style.social_icons}>
-            <ImFacebook2 className={style.icons} />
-            <BsLinkedin className={style.icons} />
-            <ImWhatsapp className={style.icons} />
-            <ImYoutube className={style.icons} />
+            <Link to={"https://www.facebook.com/"}>
+              <ImFacebook2 className={style.icons} />
+            </Link>
+            <Link to={"https://www.linkedin.com/"}>
+              <BsLinkedin className={style.icons} />
+            </Link>
+            <Link to={"https://twitter.com/"}>
+              <ImWhatsapp className={style.icons} />
+            </Link>
+            <Link to={"https://www.youtube.com/"}>
+              <ImYoutube className={style.icons} />
+            </Link>
           </div>
         </div>
 

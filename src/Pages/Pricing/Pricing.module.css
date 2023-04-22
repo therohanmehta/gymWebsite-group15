@@ -1,7 +1,7 @@
 .Main_Container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 5vw;
     background-color: rgb(242, 86, 86) rgba(57, 47, 47, 0.954);
     height: 67vh;
 padding-bottom: 100px;
@@ -17,7 +17,8 @@ padding-bottom: 100px;
           100%{background-position:0% 50%}
       }
   .Wrapper3{
-    margin-top: 4vh;
+    /* margin-top: 2vh; */
+    color: azure;
     
   }
   .Wrapper {
@@ -53,7 +54,7 @@ padding-bottom: 100px;
   }
   .Wrapper_button {
     padding: 10px 40px;
-    font-size: 12px;
+    font-size: 2vh;
     border-radius: 5px;
   }
   .box{
@@ -66,10 +67,11 @@ padding-bottom: 100px;
     background-color: rgba(245, 245, 220, 0.785);
     text-align: center;
     font-size: 2vh;
+    border-radius: 20px;
   }
   .Wrapper2_button {
     padding: 10px 40px;
-    font-size: 10px;
+    font-size: 2vh;
     border-radius: 5px;
     background-color: greenyellow;
     /* margin-top: 10px; */
@@ -77,8 +79,9 @@ padding-bottom: 100px;
   
   @media screen and (max-width: 1000px) {
     .Main_Container {
+      display: flex;
       height: 500px;
-      gap: 20px;
+      gap: 3vw;
     }
     .content{
       margin-top: 10px;
@@ -87,7 +90,7 @@ padding-bottom: 100px;
     .Wrapper {
       width: 170px;
       margin-top: 70px;
-      height: 300px;
+      height: 260px;
     }
     .Wrapper_button {
       width: 130px;
@@ -98,11 +101,15 @@ padding-bottom: 100px;
     .Wrapper2 {
       width: 200px;
       margin-top: 50px;
-      height: 50vh;
+      height: 60vh;
     }
     .Wrapper2_button {
-      height: 30px;
+      height: 6vh;
       margin: 0;
+      font-size: 8px;
+      width: 17vw;
+      padding: 10px;
+
     }
   
     /* .content {
@@ -110,7 +117,7 @@ padding-bottom: 100px;
     } */
   }
   
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 700px) {
     .Main_Container {
       height: 1000px;
       font-size: 15px;
@@ -160,6 +167,7 @@ padding-bottom: 100px;
     }
     .Wrapper3 {
       margin-left: 40px;
+      margin-top: 10vh;
     }
   }
   @media screen and (max-width: 400px){
@@ -173,11 +181,9 @@ padding-bottom: 100px;
     .Wrapper2{
       height: 310px;
     }
-    /* .Wrapper{
-      margin-top: 10px;
-    } */
     .Wrapper3{
       margin-left: 20px;
+      margin-top: 10vh;
     }
   }
   

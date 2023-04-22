@@ -30,7 +30,7 @@
 
 .nav *{
     text-decoration: none;
-    color: rgb(54, 50, 50);
+    color: rgb(223, 206, 206);
     margin-top: 5px;
     margin-right: 10px;
 }
@@ -60,10 +60,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-size: 30px;
+        font-size: 20px;
         z-index: 99;
         position: relative;
-        background-color: rgba(57, 55, 53, 0.542);
+        background-color: rgba(57, 55, 53, 0.932);
         gap: 20px;
         width: 50vw;
         height: 52vh;
