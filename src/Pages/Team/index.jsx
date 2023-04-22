@@ -3,6 +3,8 @@ import Carousel from "./Carousel";
 import { Link } from "react-router-dom";
 import style from "../TrainerSection/App.module.css";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
 function Team() {
   const data = [
     {
@@ -95,9 +97,11 @@ function Team() {
               margin: "40px auto",
             }}
           />
-           <Link to={'/Trainer'} className="link-tag"> <button className={style.btnTeam}  >Back</button> </Link>
+          <br/><br/>
+           <Link to={'/Trainer'} className="link-tag"> <button className='btnTeam'  >Back</button> </Link>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
